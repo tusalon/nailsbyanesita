@@ -1,12 +1,12 @@
 // utils/config-negocio.js - VERSIÓN MULTI-TENANT CORREGIDA
-// CLIENTE: Anita’sNailstudio
+// CLIENTE: Nails by Anesita
 
 console.log('🏢 config-negocio.js cargado');
 
 // ============================================
 // 🔥 CONFIGURACIÓN POR CLIENTE - ¡LO ÚNICO QUE CAMBIA!
 // ============================================
-const NEGOCIO_ID_POR_DEFECTO = '34bde163-c75c-4d16-8491-7635ef04aa85'; // ID de Anita’sNailstudio
+const NEGOCIO_ID_POR_DEFECTO = 'b32294ce-c2fb-454c-b7ab-ecee6f63c290'; // ID de Nails by Anesita
 
 // Hacer accesible globalmente
 window.NEGOCIO_ID_POR_DEFECTO = NEGOCIO_ID_POR_DEFECTO;
@@ -116,7 +116,7 @@ window.cargarConfiguracionNegocio = async function(forceRefresh = false) {
  */
 window.getNombreNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.nombre || 'Anita’sNailstudio';
+    return config?.nombre || 'Nails by Anesita';
 };
 
 /**
@@ -124,7 +124,7 @@ window.getNombreNegocio = async function() {
  */
 window.getTelefonoDuenno = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.telefono || '55400198';
+    return config?.telefono || '58708682';
 };
 
 /**
@@ -132,7 +132,7 @@ window.getTelefonoDuenno = async function() {
  */
 window.getEmailNegocio = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.email || 'anaelislio@gmail.com';
+    return config?.email || 'afernandezcamejo@gmail.com';
 };
 
 /**
@@ -164,7 +164,7 @@ window.getHorarioAtencion = async function() {
  */
 window.getMensajeBienvenida = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.mensaje_bienvenida || '¡Bienvenida a Anita’sNailstudio!';
+    return config?.mensaje_bienvenida || '¡Bienvenida a Nails by Anesita!';
 };
 
 /**
@@ -180,7 +180,7 @@ window.getMensajeConfirmacion = async function() {
  */
 window.getNtfyTopic = async function() {
     const config = await window.cargarConfiguracionNegocio();
-    return config?.ntfy_topic || 'anitasnailstudio';
+    return config?.ntfy_topic || 'nails-by-anesita';
 };
 
 /**
@@ -205,5 +205,5 @@ setTimeout(async () => {
     await window.cargarConfiguracionNegocio();
 }, 500);
 
-console.log('✅ config-negocio.js listo para Anita’sNailstudio');
+console.log('✅ config-negocio.js listo para Nails by Anesita');
 console.log('🏷️  ID configurado:', NEGOCIO_ID_POR_DEFECTO);

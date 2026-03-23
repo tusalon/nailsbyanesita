@@ -1,22 +1,22 @@
-// sw.js - Service Worker para Anita’sNailstudio
+// sw.js - Service Worker para Nails by Anesita
 
-const CACHE_NAME = 'anitasnailstudio-v1';
+const CACHE_NAME = 'nails-by-anesita-v1';
 const urlsToCache = [
-  '/anitasnailstudio/',
-  '/anitasnailstudio/index.html',
-  '/anitasnailstudio/admin.html',
-  '/anitasnailstudio/admin-login.html',
-  '/anitasnailstudio/setup-wizard.html',
-  '/anitasnailstudio/editar-negocio.html',
-  '/anitasnailstudio/manifest.json',
-  '/anitasnailstudio/icons/icon-72x72.png',
-  '/anitasnailstudio/icons/icon-96x96.png',
-  '/anitasnailstudio/icons/icon-128x128.png',
-  '/anitasnailstudio/icons/icon-144x144.png',
-  '/anitasnailstudio/icons/icon-152x152.png',
-  '/anitasnailstudio/icons/icon-192x192.png',
-  '/anitasnailstudio/icons/icon-384x384.png',
-  '/anitasnailstudio/icons/icon-512x512.png'
+  '/nails-by-anesita/',
+  '/nails-by-anesita/index.html',
+  '/nails-by-anesita/admin.html',
+  '/nails-by-anesita/admin-login.html',
+  '/nails-by-anesita/setup-wizard.html',
+  '/nails-by-anesita/editar-negocio.html',
+  '/nails-by-anesita/manifest.json',
+  '/nails-by-anesita/icons/icon-72x72.png',
+  '/nails-by-anesita/icons/icon-96x96.png',
+  '/nails-by-anesita/icons/icon-128x128.png',
+  '/nails-by-anesita/icons/icon-144x144.png',
+  '/nails-by-anesita/icons/icon-152x152.png',
+  '/nails-by-anesita/icons/icon-192x192.png',
+  '/nails-by-anesita/icons/icon-384x384.png',
+  '/nails-by-anesita/icons/icon-512x512.png'
 ];
 
 // ============================================
@@ -108,7 +108,7 @@ self.addEventListener('fetch', event => {
           }
           // Si no hay cache y es imagen, devolver icon por defecto
           if (event.request.url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) {
-            return caches.match('/anitasnailstudio/icons/icon-192x192.png');
+            return caches.match('/nails-by-anesita/icons/icon-192x192.png');
           }
           return new Response('Error de red', { status: 408 });
         });
@@ -138,6 +138,6 @@ self.addEventListener('message', event => {
   }
 });
 
-console.log('✅ Service Worker configurado para Anita’sNailstudio');
+console.log('✅ Service Worker configurado para Nails by Anesita');
 console.log('📦 Cache:', CACHE_NAME);
 console.log('📄 Archivos a cachear:', urlsToCache.length);
